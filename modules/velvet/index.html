@@ -185,7 +185,9 @@
         
             <li><a href="#collect-some-statistics-on-the-contigs">Collect some statistics on the contigs.</a></li>
         
-            <li><a href="#copy-the-relevant-data-back-into-the-k-mer-spreadsheet-on-your-line">Copy the relevant data back into the k-mer spreadsheet on your line.</a></li>
+            <li><a href="#assembly-with-velvet-optimiser">Assembly with Velvet Optimiser</a></li>
+        
+            <li><a href="#look-at-the-fasta-statistics-for-the-velvet-optimiser-contigs">Look at the fasta statistics for the Velvet Optimiser contigs</a></li>
         
     
     </ul>
@@ -338,7 +340,7 @@ Ask your demonstrator if you would like to know the difference between contigs a
 </ul>
 </li>
 <li>
-<p>Your tool interface should look like this:</p>
+<p>Your tool interface should look something like this (you will most likely have a different value for k):</p>
 </li>
 </ul>
 <p><img alt="velvet interface" src="./images/image09.png" /></p>
@@ -394,7 +396,32 @@ Ask your demonstrator if you would like to know the difference between contigs a
 </ul>
 </li>
 </ul>
-<h2 id="copy-the-relevant-data-back-into-the-k-mer-spreadsheet-on-your-line">Copy the relevant data back into the k-mer spreadsheet on your line.</h2>
+<p><strong>Now copy the relevant data back into the k-mer spreadsheet on your line.</strong></p>
+<p>Along with the demonstrator, have a look at the effect of the k-mer size on the output metrics of the assembly. Note that there are local maxima and minima in the charts. In next week&rsquo;s lecture, this will be discussed in detail.</p>
+<h2 id="assembly-with-velvet-optimiser">Assembly with Velvet Optimiser</h2>
+<p>Now that we have seen the effect of k-mer size on the assembly, we will run the Velvet Optimiser to automatically choose the best k-mer size for us. It will use the &ldquo;n50&rdquo; to determine the best k-mer value to use. It then performs the further graph cleaning steps and automatically chooses a bunch of other parameters for velvet. We should get a much better assembly result than we did with our attempts with Velvet alone..</p>
+<ul>
+<li>Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Assembly &rarr; Velvet Optimiser</ss></li>
+<li>
+<p>Set the following parameters (leave other settings as they are):</p>
+<ul>
+<li><ss>Start k-mer size</ss>: 45</li>
+<li><ss>End k-mer size</ss>: 73</li>
+<li><ss>Input file type</ss>: Fastq</li>
+<li><ss>Single or paired end reads</ss>: Paired</li>
+<li><ss> Select first set of reads</ss>: <fn>mutant_R1.fastq</fn>  </li>
+<li>
+<p><ss> Select second set of reads</ss>: <fn>mutant_R2.fastq</fn></p>
+</li>
+<li>
+<p>Click <ss>Execute</ss></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="look-at-the-fasta-statistics-for-the-velvet-optimiser-contigs">Look at the fasta statistics for the Velvet Optimiser contigs</h2>
+<p>Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?</p>
+<p>We will be discussing this and more in next week&rsquo;s lecture.</p>
 <!-- ## What next?
 
 - [Annotate the genome using Prokka.](/modules/prokka/index.md)

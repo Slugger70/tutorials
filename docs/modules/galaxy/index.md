@@ -8,19 +8,19 @@ Galaxy is an open, web-based platform. Details about the project can be found [h
 
 The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on the left, the <ss>Viewing</ss> panel in the middle and the analysis and data <ss>History</ss> on the right.
 
-![galaxy overview screenshot](images/image05.png)
+![galaxy overview screenshot](images/galaxy-overview.png)
 
 ## Register in Galaxy
 
 Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.
 
-In the address bar, type in the address of your galaxy server. Alternatively, you can access galaxy via the dashboard of your mGVL.
+In the address bar, type in the address of your galaxy server. (http://galaxy-mel.genome.edu.au)
 
-![Galaxy URL](images/image09.png)
+![Galaxy URL](images/galaxy_address_bar.png)
 
 Click on <ss>User</ss> button on the right.
 
-![Register or Login screenshot](images/image04.png)
+![Register or Login screenshot](images/location_of_user_menu.png)
 
 - Select: <ss>User &rarr; Register</ss>
 - Enter your email, choose a password, and choose a user name.
@@ -31,7 +31,7 @@ Click on <ss>User</ss> button on the right.
 - In the menu options across the top, go to <ss>Shared Data</ss>.
 - Click on <ss>Histories</ss>.
 
-![Shared histories](images/image10.png)
+![Shared histories](images/shared_data_histories.png)
 
 - A list of published histories should appear. Click on the history that you want to use.
 - Click on <ss>Import history</ss>.

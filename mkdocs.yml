@@ -23,6 +23,7 @@ pages:
     - Genome assembly with Velvet: modules/velvet/index.md
     - Genome assembly with Spades: modules/spades/index.md
     - Genome annotation: modules/prokka/index.md
+    - Basic Variant finding: modules/variants/index.md
     - Variant finding: modules/snippy/index.md
 
 

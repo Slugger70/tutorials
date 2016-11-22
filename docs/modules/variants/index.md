@@ -33,6 +33,8 @@ For this tutorial, our reference is the <fn>wildtype.fna</fn> file and our reads
 
 If these files are not presently in your Galaxy history, import them from the [Training dataset page.](../data-dna/index.md)
 
+## Section 1 - Read Mapping
+
 ## Map reads with BWA mem
 
 - Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Mapping &rarr; Map with BWA mem</ss>
@@ -95,4 +97,24 @@ Now look at the contents of the resultant SAM file.
 
 ![JBrowse screenshot](images/jbrowse2.png)    
 
-#### End of part 1 of this exercise!
+#### End of part 1 of this exercise! More Slides!
+
+## Section 2 - Variant calling
+
+### Call variants in our BAM file with FreeBayes
+
+- Go to <ss>Tools &rarr NGS: Variant Analysis &rarr FreeBayes</ss>
+- For <ss>Load reference genome from</ss> select *History*
+- For <ss>BAM file</ss> select our BAM file.*x: Map with BWA-MEM on data xx, data xx, and data xx (mapped reads in BAM format)*
+- For <ss>Use the following dataset as the reference sequence</ss> select *x: Wildtype.fna*
+- Leave everything else as default
+- Click <ss>Execute</ss>
+
+FreeBayes will now search through each position of our BAM file and look for statistically valid variants. It uses Bayesian inference to do this. See [here](https://en.wikipedia.org/wiki/Bayesian_inference) for details if you're interested. (Warning! It's complex probability theory... )
+
+Once it's complete you'll see a new file in your history called *x:  FreeBayes on data x and data x (variants)* This is a VCF file that we discussed in the slides.
+
+Click on the "eye" icon to view the file. You'll notice that there is a lot of header information followed by some found variants. Can you find the one we looked at earlier in our visualisation?
+
+
+

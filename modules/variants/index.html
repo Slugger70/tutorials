@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../favicon.ico">
         
 
-	<title>Starting with Galaxy - Sepsis Training 2016</title>
+	<title>Basic Variant finding - Sepsis Training 2016</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -63,8 +63,8 @@
                     <ul class="dropdown-menu">
                     
                         
-<li class="active">
-    <a href="./">Starting with Galaxy</a>
+<li >
+    <a href="../galaxy/">Starting with Galaxy</a>
 </li>
 
                     
@@ -93,8 +93,8 @@
 
                     
                         
-<li >
-    <a href="../variants/">Basic Variant finding</a>
+<li class="active">
+    <a href="./">Basic Variant finding</a>
 </li>
 
                     
@@ -154,12 +154,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../..">
+                    <a rel="next" href="../prokka/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../data-dna/">
+                    <a rel="prev" href="../snippy/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -173,60 +173,133 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#get-data-into-galaxy">Get Data into Galaxy</a></li>
+        <li class="main active"><a href="#basic-variant-finding">Basic Variant Finding</a></li>
         
-            <li><a href="#galaxy-background">Galaxy Background</a></li>
+            <li><a href="#background">Background</a></li>
         
-            <li><a href="#register-in-galaxy">Register in Galaxy</a></li>
+            <li><a href="#learning-objectives">Learning Objectives</a></li>
         
-            <li><a href="#import-a-history">Import a history</a></li>
+            <li><a href="#prepare-reference">Prepare reference</a></li>
         
-            <li><a href="#other-ways-to-import-data-into-galaxy">Other ways to import data into Galaxy</a></li>
+            <li><a href="#map-reads-with-bwa-mem">Map reads with BWA mem</a></li>
+        
+            <li><a href="#convert-the-bam-file-to-a-sam-file">Convert the BAM File to a SAM file.</a></li>
+        
+            <li><a href="#view-bam-file-in-jbrowse">View BAM file in JBrowse</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="get-data-into-galaxy">Get Data into Galaxy</h1>
-<h2 id="galaxy-background">Galaxy Background</h2>
-<p>Galaxy is a web-based analysis and workflow platform designed for biologists to analyse their own data. It can be used to run a variety of bioinformatics tools. The selection of bioinformatics tools installed on the Galaxy instance we are using today caters for the analysis of bacterial genomics data sets.</p>
-<p>Galaxy is an open, web-based platform. Details about the project can be found <a href="https://galaxyproject.org/">here</a>.</p>
-<p>The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on the left, the <ss>Viewing</ss> panel in the middle and the analysis and data <ss>History</ss> on the right.</p>
-<p><img alt="galaxy overview screenshot" src="./images/galaxy-overview.png" /></p>
-<h2 id="register-in-galaxy">Register in Galaxy</h2>
-<p>Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.</p>
-<p>In the address bar, type in the address of your galaxy server. (http://galaxy-mel.genome.edu.au)</p>
-<p><img alt="Galaxy URL" src="./images/galaxy_address_bar.png" /></p>
-<p>Click on <ss>User</ss> button on the right.</p>
-<p><img alt="Register or Login screenshot" src="./images/location_of_user_menu.png" /></p>
+<h1 id="basic-variant-finding">Basic Variant Finding</h1>
+<h2 id="background">Background</h2>
+<p>Variant calling is the process of identifying differences between two genome samples.
+Usually differences are limited to single nucleotide polymorphisms (SNPs) and small insertions and deletions (indels). Larger structural variation such as inversions, duplications and large deletions are not typically covered by &ldquo;variant calling&rdquo;.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ol>
+<li>How to map sequence reads versus a reference</li>
+<li>Visualise the resultant BAM file of alignments</li>
+<li>Search the BAM file for variants using a SNP caller</li>
+<li>Filter the SNPS</li>
+</ol>
+<h2 id="prepare-reference">Prepare reference</h2>
+<!-- We will import  history from Galaxy:
+
+- In the menu options across the top, go to <ss>Shared Data</ss>.
+- Click on <ss>Histories</ss>.
+- A list of published histories should appear. Click on <fn>GCC 2016 small genome variants</fn>.
+- Click on <ss>Import history</ss>.
+- An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
+- The history will now appear in your Current History pane, and the files are now ready to use in Galaxy analyses.
+-->
+
+<!-- We will use the same data that we used in the [Assembly with Spades tutorial.](../spades/index.md) This should still be in your current galaxy history. If not, re-import the data into a new history using the instructions in that tutorial.-->
+
+<p>For variant calling, we need a reference genome that is of the same strain as the input sequence reads.</p>
+<p>For this tutorial, our reference is the <fn>wildtype.fna</fn> file and our reads are <fn>mutant_R1.fastq</fn> and <fn>mutant_R2.fastq</fn>.</p>
+<p>If these files are not presently in your Galaxy history, import them from the <a href="../data-dna/">Training dataset page.</a></p>
+<h2 id="map-reads-with-bwa-mem">Map reads with BWA mem</h2>
 <ul>
-<li>Select: <ss>User &rarr; Register</ss></li>
-<li>Enter your email, choose a password, and choose a user name.</li>
-<li>Click <ss>Submit</ss></li>
-</ul>
-<h2 id="import-a-history">Import a history</h2>
-<ul>
-<li>In the menu options across the top, go to <ss>Shared Data</ss>.</li>
-<li>Click on <ss>Histories</ss>.</li>
-</ul>
-<p><img alt="Shared histories" src="./images/shared_data_histories.png" /></p>
-<ul>
-<li>A list of published histories should appear. Click on the history that you want to use.</li>
-<li>Click on <ss>Import history</ss>.</li>
+<li>Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Mapping &rarr; Map with BWA mem</ss></li>
+<li>For <ss>Will you select a reference genome from your history or use a built-in index?</ss> select <em>Use a genome from history&hellip;</em>.</li>
+<li>Then for <ss>Reference Sequence</ss> choose the <fn>wildtype.fna</fn> file.</li>
+<li>For <ss>Single or Paired-end reads</ss> choose <em>Paired</em>.</li>
+<li>Then choose the first set of reads, <fn>mutant_R1.fastq</fn> and second set of reads, <fn>mutant_R2.fastq</fn>.</li>
 <li>
-<p>An option will appear to re-name the history. We don&rsquo;t need to rename it, so click <ss>Import</ss>.</p>
+<p>Leave everything else as default.</p>
 </li>
 <li>
-<p>The history will now appear in your Current History pane, and the files are ready to use in Galaxy analyses.</p>
+<p>Click <ss>Execute</ss>.</p>
 </li>
 </ul>
-<h2 id="other-ways-to-import-data-into-galaxy">Other ways to import data into Galaxy</h2>
+<h2 id="convert-the-bam-file-to-a-sam-file">Convert the BAM File to a SAM file.</h2>
+<p>Now we want to look at the results. BWA mem will produce a BAM file. This is a compressed non-human readable format. So to see what it looks like, we need to convert the BAM file to a SAM file.</p>
 <ul>
-<li>Upload a file from your computer</li>
-<li>Copy a link to a Galaxy history</li>
-<li>For sample training data files to use, see the <a href="../data-dna/">next section.</a></li>
-</ul></div>
+<li>Go to <ss>Tools &rarr; NGS: Sam tools &rarr; BAM-to-SAM</ss></li>
+<li>Select the BAM file we just produced above and click <ss>Execute</ss></li>
+</ul>
+<p>Now look at the contents of the resultant SAM file.</p>
+<h2 id="view-bam-file-in-jbrowse">View BAM file in JBrowse</h2>
+<ul>
+<li>
+<p>Go to <ss>Statistics and Visualisation &rarr; Graph/Display Data &rarr; JBrowse</ss></p>
+</li>
+<li>
+<p>Under <ss>Fasta Sequence(s)</ss> choose <fn>wildtype.fna</fn>. This sequence will be the reference against which BAM file is displayed.</p>
+</li>
+<li>
+<p>For <ss>Produce a Standalone Instance</ss> select <em>Yes</em>.</p>
+</li>
+<li>
+<p>For <ss>Genetic Code</ss> choose <em>11: The Bacterial, Archaeal and Plant Plastid Code</em>.</p>
+</li>
+<li>
+<p>We will now set up a new track We will choose to display the sequence reads (the .bam file)</p>
+</li>
+</ul>
+<p><em>Track 1 - sequence reads</em></p>
+<ul>
+<li>Click <ss>Insert Track Group</ss></li>
+<li>For <ss>Track Cateogry</ss> name it &ldquo;sequence reads&rdquo;</li>
+<li>Click <ss>Insert Annotation Track</ss></li>
+<li>For <ss>Track Type</ss> choose <em>BAM Pileups</em></li>
+<li>For <ss>BAM Track Data</ss> select <fn>the bam file</fn></li>
+<li>
+<p>For <ss>Autogenerate SNP Track</ss> select <em>Yes</em></p>
+</li>
+<li>
+<p>Click <ss>Execute</ss></p>
+</li>
+<li>
+<p>A new file will be created, called <fn>JBrowse on data XX and data XX - Complete</fn>. Click on the eye icon next to the file name. The JBrowse window will appear in the centre Galaxy panel.</p>
+</li>
+<li>
+<p>On the left, tick the boxes to display the tracks</p>
+</li>
+<li>
+<p>Use the minus button to zoom out to see:</p>
+<ul>
+<li>sequence reads and their coverage (the grey graph)</li>
+</ul>
+</li>
+<li>
+<p>Use the plus button to zoom in to see:</p>
+<ul>
+<li>probable real variants (a whole column of snps)</li>
+<li>probable errors (single one here and there)</li>
+</ul>
+</li>
+<li>
+<p>In the coordinates box, type in <em>47299</em> and then <ss>Go</ss> to see the position of the SNP discussed above.</p>
+<ul>
+<li>the correct codon at this position is TGT, coding for the amino acid Cysteine, in the middle row of the amino acid translations.</li>
+<li>the mutation of T &rarr; A turns this triplet into TGA, a stop codon.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="JBrowse screenshot" src="./images/jbrowse2.png" />    </p>
+<h4 id="end-of-part-1-of-this-exercise">End of part 1 of this exercise!</h4></div>
         </div>
 
         <footer class="col-md-12">

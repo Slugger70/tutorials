@@ -181,11 +181,15 @@
         
             <li><a href="#prepare-reference">Prepare reference</a></li>
         
+            <li><a href="#section-1-read-mapping">Section 1 - Read Mapping</a></li>
+        
             <li><a href="#map-reads-with-bwa-mem">Map reads with BWA mem</a></li>
         
             <li><a href="#convert-the-bam-file-to-a-sam-file">Convert the BAM File to a SAM file.</a></li>
         
             <li><a href="#view-bam-file-in-jbrowse">View BAM file in JBrowse</a></li>
+        
+            <li><a href="#section-2-variant-calling">Section 2 - Variant calling</a></li>
         
     
     </ul>
@@ -219,6 +223,7 @@ Usually differences are limited to single nucleotide polymorphisms (SNPs) and sm
 <p>For variant calling, we need a reference genome that is of the same strain as the input sequence reads.</p>
 <p>For this tutorial, our reference is the <fn>wildtype.fna</fn> file and our reads are <fn>mutant_R1.fastq</fn> and <fn>mutant_R2.fastq</fn>.</p>
 <p>If these files are not presently in your Galaxy history, import them from the <a href="../data-dna/">Training dataset page.</a></p>
+<h2 id="section-1-read-mapping">Section 1 - Read Mapping</h2>
 <h2 id="map-reads-with-bwa-mem">Map reads with BWA mem</h2>
 <ul>
 <li>Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Mapping &rarr; Map with BWA mem</ss></li>
@@ -299,7 +304,20 @@ Usually differences are limited to single nucleotide polymorphisms (SNPs) and sm
 </li>
 </ul>
 <p><img alt="JBrowse screenshot" src="./images/jbrowse2.png" />    </p>
-<h4 id="end-of-part-1-of-this-exercise">End of part 1 of this exercise!</h4></div>
+<h4 id="end-of-part-1-of-this-exercise-more-slides">End of part 1 of this exercise! More Slides!</h4>
+<h2 id="section-2-variant-calling">Section 2 - Variant calling</h2>
+<h3 id="call-variants-in-our-bam-file-with-freebayes">Call variants in our BAM file with FreeBayes</h3>
+<ul>
+<li>Go to <ss>Tools &amp;rarr NGS: Variant Analysis &amp;rarr FreeBayes</ss></li>
+<li>For <ss>Load reference genome from</ss> select <em>History</em></li>
+<li>For <ss>BAM file</ss> select our BAM file.<em>x: Map with BWA-MEM on data xx, data xx, and data xx (mapped reads in BAM format)</em></li>
+<li>For <ss>Use the following dataset as the reference sequence</ss> select <em>x: Wildtype.fna</em></li>
+<li>Leave everything else as default</li>
+<li>Click <ss>Execute</ss></li>
+</ul>
+<p>FreeBayes will now search through each position of our BAM file and look for statistically valid variants. It uses Bayesian inference to do this. See <a href="https://en.wikipedia.org/wiki/Bayesian_inference">here</a> for details if you&rsquo;re interested. (Warning! It&rsquo;s complex probability theory&hellip; )</p>
+<p>Once it&rsquo;s complete you&rsquo;ll see a new file in your history called <em>x:  FreeBayes on data x and data x (variants)</em> This is a VCF file that we discussed in the slides.</p>
+<p>Click on the &ldquo;eye&rdquo; icon to view the file. You&rsquo;ll notice that there is a lot of header information followed by some found variants. Can you find the one we looked at earlier in our visualisation?</p></div>
         </div>
 
         <footer class="col-md-12">

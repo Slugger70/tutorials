@@ -126,6 +126,8 @@ Although we have warnings for two outputs (per base sequence content; Kmer conte
 
 ## Assemble reads with Velvet
 
+Everyone will be choose/be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here](https://docs.google.com/spreadsheets/d/1SA1eArwnvkwMRMJKHUNJabPVAaO9a0jjeplqoYlvtb0/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
+
 - We will perform a *de novo* assembly of the mutant FASTQ reads into long contiguous sequences (in FASTA format.)
 - Velvet requires the user to input a value of *k* for the assembly process. K-mers are fragments of sequence reads. Small k-mers will give greater connectivity, but large k-mers will give better specificity.
 

@@ -213,7 +213,7 @@ Now that we have seen the effect of k-mer size on the assembly, we will run the 
 
 Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?
 
-Have a look at the Velvet Opimiser log file, it's hidden. Click on the **hidden** link at the top of the History pane. You'll then need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**.
+Have a look at the Velvet Optimiser log file, it's hidden. Click on the **hidden** link at the top of the History pane. You'll then need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**.
 
 Can you find which **k** value VelvetOptimiser used for it's final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff.. Any ideas what these are? See the [Velvet paper](http://www.genome.org/cgi/content/short/18/5/821) or the [Velvet manual](https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf) for details on these parameters. 
 

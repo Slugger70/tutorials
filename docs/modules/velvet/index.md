@@ -191,7 +191,7 @@ Ask your demonstrator if you would like to know the difference between contigs a
 
 **Now copy the relevant data back into the k-mer spreadsheet on your line.**
 
-Along with the demonstrator, have a look at the effect of the k-mer size on the output metrics of the assembly. Note that there are local maxima and minima in the charts. In next week's lecture, this will be discussed in detail.
+Along with the demonstrator, have a look at the effect of the k-mer size on the output metrics of the assembly. Note that there are local maxima and minima in the charts. What do you think is happening here? Why is the value of k (the k-mer size) having an effect? <!--In next week's lecture, this will be discussed in detail. -->
 
 ## Assembly with Velvet Optimiser
 
@@ -213,9 +213,10 @@ Now that we have seen the effect of k-mer size on the assembly, we will run the 
 
 Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?
 
-Have a look at the Velvet log file, (You might need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**)
+Have a look at the Velvet Opimiser log file, it's hidden. Click on the **hidden** link at the top of the History pane. You'll then need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**.
 
 Can you find which **k** value VelvetOptimiser used for it's final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff.. Any ideas what these are? See the [Velvet paper](http://www.genome.org/cgi/content/short/18/5/821) or the [Velvet manual](https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf) for details on these parameters. 
+
 <!-- ## What next?
 
 - [Annotate the genome using Prokka.](/modules/prokka/index.md)

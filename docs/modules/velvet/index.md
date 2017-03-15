@@ -13,7 +13,7 @@ In this activity, we will perform a *de novo* assembly of a short read set using
 ## Learning objectives
 At the end of this tutorial you should be able to:
 
-1. assemble the reads using Velvet, and
+1. assemble the reads using VelvetOptimiser, and
 2. examine the output assembly.
 
 ## Galaxy Background
@@ -30,7 +30,7 @@ The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on t
 
 Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.
 
-In the address bar, type in the address of your galaxy server. (http://galaxy-mel.genome.edu.au)
+In the address bar, type in the address of your galaxy server. ([http://galaxy-mel.genome.edu.au](http://galaxy-mel.genome.edu.au) or [galaxy-tut.genome.edu.au](galaxy-tut.genome.edu.au))
 
 ![Galaxy URL](images/galaxy_address_bar.png)
 
@@ -59,7 +59,7 @@ Return to the home screen.
 
 ![Shared histories](images/shared_data_histories.png)
 
-- A list of published histories should appear. Click on the history called **COMP90014-assembly**
+- A list of published histories should appear. Click on the history called **BINF90002-assembly**
 - Click on <ss>Import history</ss>.
 - An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
 
@@ -213,8 +213,9 @@ Now that we have seen the effect of k-mer size on the assembly, we will run the 
 
 Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?
 
-We will be discussing this and more in next week's lecture.
+Have a look at the Velvet log file, (You might need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**)
 
+Can you find which **k** value VelvetOptimiser used for it's final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff.. Any ideas what these are? See the [Velvet paper](http://www.genome.org/cgi/content/short/18/5/821) or the [Velvet manual](https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf) for details on these parameters. 
 <!-- ## What next?
 
 - [Annotate the genome using Prokka.](/modules/prokka/index.md)

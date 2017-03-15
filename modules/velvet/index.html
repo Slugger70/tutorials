@@ -211,7 +211,7 @@ A protocol for assembling with Velvet (another *de novo* assembler) is available
 <h2 id="learning-objectives">Learning objectives</h2>
 <p>At the end of this tutorial you should be able to:</p>
 <ol>
-<li>assemble the reads using Velvet, and</li>
+<li>assemble the reads using VelvetOptimiser, and</li>
 <li>examine the output assembly.</li>
 </ol>
 <h2 id="galaxy-background">Galaxy Background</h2>
@@ -221,7 +221,7 @@ A protocol for assembling with Velvet (another *de novo* assembler) is available
 <p><img alt="galaxy overview screenshot" src="./images/galaxy-overview.png" /></p>
 <h2 id="register-in-galaxy">Register in Galaxy</h2>
 <p>Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.</p>
-<p>In the address bar, type in the address of your galaxy server. (http://galaxy-mel.genome.edu.au)</p>
+<p>In the address bar, type in the address of your galaxy server. (<a href="http://galaxy-mel.genome.edu.au">http://galaxy-mel.genome.edu.au</a> or <a href="./galaxy-tut.genome.edu.au">galaxy-tut.genome.edu.au</a>)</p>
 <p><img alt="Galaxy URL" src="./images/galaxy_address_bar.png" /></p>
 <p>Click on <ss>User</ss> button on the right.</p>
 <p><img alt="Register or Login screenshot" src="./images/location_of_user_menu.png" /></p>
@@ -245,7 +245,7 @@ A protocol for assembling with Velvet (another *de novo* assembler) is available
 </ul>
 <p><img alt="Shared histories" src="./images/shared_data_histories.png" /></p>
 <ul>
-<li>A list of published histories should appear. Click on the history called <strong>COMP90014-assembly</strong></li>
+<li>A list of published histories should appear. Click on the history called <strong>BINF90002-assembly</strong></li>
 <li>Click on <ss>Import history</ss>.</li>
 <li>
 <p>An option will appear to re-name the history. We don&rsquo;t need to rename it, so click <ss>Import</ss>.</p>
@@ -403,7 +403,7 @@ Ask your demonstrator if you would like to know the difference between contigs a
 </li>
 </ul>
 <p><strong>Now copy the relevant data back into the k-mer spreadsheet on your line.</strong></p>
-<p>Along with the demonstrator, have a look at the effect of the k-mer size on the output metrics of the assembly. Note that there are local maxima and minima in the charts. In next week&rsquo;s lecture, this will be discussed in detail.</p>
+<p>Along with the demonstrator, have a look at the effect of the k-mer size on the output metrics of the assembly. Note that there are local maxima and minima in the charts. What do you think is happening here? Why is the value of k (the k-mer size) having an effect? <!--In next week's lecture, this will be discussed in detail. --></p>
 <h2 id="assembly-with-velvet-optimiser">Assembly with Velvet Optimiser</h2>
 <p>Now that we have seen the effect of k-mer size on the assembly, we will run the Velvet Optimiser to automatically choose the best k-mer size for us. It will use the &ldquo;n50&rdquo; to determine the best k-mer value to use. It then performs the further graph cleaning steps and automatically chooses a bunch of other parameters for velvet. We should get a much better assembly result than we did with our attempts with Velvet alone..</p>
 <ul>
@@ -427,7 +427,8 @@ Ask your demonstrator if you would like to know the difference between contigs a
 </ul>
 <h2 id="look-at-the-fasta-statistics-for-the-velvet-optimiser-contigs">Look at the fasta statistics for the Velvet Optimiser contigs</h2>
 <p>Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?</p>
-<p>We will be discussing this and more in next week&rsquo;s lecture.</p>
+<p>Have a look at the Velvet log file, (You might need to examine it&rsquo;s STDERR output by clicking on the <strong>name of the file</strong>, then the <strong>&ldquo;i&rdquo;</strong> icon, then <strong>stderr</strong>)</p>
+<p>Can you find which <strong>k</strong> value VelvetOptimiser used for it&rsquo;s final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff.. Any ideas what these are? See the <a href="http://www.genome.org/cgi/content/short/18/5/821">Velvet paper</a> or the <a href="https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf">Velvet manual</a> for details on these parameters. </p>
 <!-- ## What next?
 
 - [Annotate the genome using Prokka.](/modules/prokka/index.md)

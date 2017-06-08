@@ -59,7 +59,7 @@ Return to the home screen.
 
 ![Shared histories](images/shared_data_histories.png)
 
-- A list of published histories should appear. Click on the history called **BINF90002-assembly**
+- A list of published histories should appear. Click on the history called **CAMBRIDGE-2017**
 - Click on <ss>Import history</ss>.
 - An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
 

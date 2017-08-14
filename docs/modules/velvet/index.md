@@ -30,7 +30,7 @@ The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on t
 
 Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.
 
-In the address bar, type in the address of your galaxy server. ([http://canada-2.genome.edu.au](http://canada-2.genome.edu.au) or [http://canada-3.genome.edu.au](http://canada-3.genome.edu.au))
+In the address bar, type in the address of your galaxy server. ([http://comp90014-a.genome.edu.au](http://comp90014-a.genome.edu.au) or [http://comp90014-b.genome.edu.au](http://comp90014-b.genome.edu.au)) or ([http://comp90014-c.genome.edu.au](http://comp90014-c.genome.edu.au) or [http://comp90014-d.genome.edu.au](http://comp90014-d.genome.edu.au))
 
 ![Galaxy URL](images/galaxy_address_bar.png)
 

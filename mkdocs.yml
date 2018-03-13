@@ -2,7 +2,7 @@ site_name: Sepsis Training 2016
 site_description: Tutorials for analysing bacterial omics data
 site_author: Anna Syme, Torsten Seemann
 site_favicon: favicon.ico
-theme: yeti
+theme: material
 #theme: united
 markdown_extensions:
     - admonition

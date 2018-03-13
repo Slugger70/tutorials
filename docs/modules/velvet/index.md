@@ -59,7 +59,7 @@ Return to the home screen.
 
 ![Shared histories](images/shared_data_histories.png)
 
-- A list of published histories should appear. Click on the history called **GCC-assembly-2017**
+- A list of published histories should appear. Click on the history called **Microbial-genomics-workshop**
 - Click on <ss>Import history</ss>.
 - An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
 
@@ -70,10 +70,8 @@ Return to the home screen.
 
 
 - The files we need for assembly are the <fn>mutant_R1.fastq</fn> and <fn>mutant_R2.fastq</fn>.
-- (We don't need the reference genome sequence for this tutorial).
-
--   The reads are paired-end.
--   Each read is 150 bases long. <!--(before trimming)-->
+- The reads are paired-end.
+- Each read is 150 bases long. <!--(before trimming)-->
 
 -   The number of bases sequenced is equivalent to 19x the genome sequence of the wildtype strain. (Read coverage 19x - rather low!).
 

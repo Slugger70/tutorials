@@ -55,7 +55,7 @@ Return to the home screen.
 ## Import a history
 
 - In the menu options across the top, go to <ss>Shared Data</ss>.
-- Click on <ss>Published Histories</ss>.
+- Click on <ss>Histories</ss>.
 
 ![Shared histories](images/shared_data_histories.png)
 
@@ -124,7 +124,7 @@ Although we have warnings for two outputs (per base sequence content; Kmer conte
 
 ## Assemble reads with Velvet
 
-Everyone will be choose/be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here in the shared kmer spreadsheet](https://docs.google.com/spreadsheets/d/1WBAv3FCoJbamoeh9sL6qODzM0-LbwFM5ZbEL_C4DQGk/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
+Everyone will be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here in the shared kmer spreadsheet](https://docs.google.com/spreadsheets/d/1WBAv3FCoJbamoeh9sL6qODzM0-LbwFM5ZbEL_C4DQGk/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
 
 - We will perform a *de novo* assembly of the mutant FASTQ reads into long contiguous sequences (in FASTA format.)
 - Velvet requires the user to input a value of *k* for the assembly process. K-mers are fragments of sequence reads. Small k-mers will give greater connectivity, but large k-mers will give better specificity.

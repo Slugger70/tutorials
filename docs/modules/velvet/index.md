@@ -153,11 +153,13 @@ Ask your demonstrator if you would like to know the difference between contigs a
 
 - Galaxy is now running velvet on the reads for you.
 - Press the refresh button in the history pane to see if it has finished.
-- When it is finished, you will have three new files in your history.  
+- When it is finished, you will have four new files in your history.  
 
     - a <fn>Contigs</fn> file
     - a <fn>Contigs stats</fn> file
+    - a <fn>LastGraph</fn> file
     - the velvet <fn>log</fn> file
+    
 
 - Click on the View Data button ![Eye icon](images/image04.png) on each of the files.
 

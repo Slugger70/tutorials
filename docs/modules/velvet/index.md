@@ -177,7 +177,7 @@ Ask your demonstrator if you would like to know the difference between contigs a
 
 ## Collect some statistics on the contigs.
 
-- Go to <ss>Basic Tools &rarr; NGS Common Toolsets &rarr; FASTA manipulation &rarr; Fasta statistics</ss>
+- Go to <ss>NGS Common Toolsets &rarr; FASTA manipulation &rarr; Fasta statistics</ss>
 - For the required input file, choose the velvet <fn>Contigs</fn> file.
 - Click <ss>Execute</ss>.
 - A new file will appear called <fn>Fasta summary stats</fn>

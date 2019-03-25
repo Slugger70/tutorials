@@ -30,7 +30,7 @@ The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on t
 
 Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.
 
-In the address bar, type in the address of your galaxy server. ([http://comp90014-a.genome.edu.au](http://comp90014-a.genome.edu.au) or [http://comp90014-b.genome.edu.au](http://comp90014-b.genome.edu.au)) or ([http://comp90014-c.genome.edu.au](http://comp90014-c.genome.edu.au) or [http://comp90014-d.genome.edu.au](http://comp90014-d.genome.edu.au))
+In the address bar, type in the address of your galaxy server, e.g. [Galaxy Australia](https://usegalaxy.org.au).
 
 ![Galaxy URL](images/galaxy_address_bar.png)
 
@@ -55,11 +55,11 @@ Return to the home screen.
 ## Import a history
 
 - In the menu options across the top, go to <ss>Shared Data</ss>.
-- Click on <ss>Published Histories</ss>.
+- Click on <ss>Histories</ss>.
 
 ![Shared histories](images/shared_data_histories.png)
 
-- A list of published histories should appear. Click on the history called **GCC-assembly-2017**
+- A list of published histories should appear. Click on the history called **Microbial Genomics Workshop - BINF90002**
 - Click on <ss>Import history</ss>.
 - An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
 
@@ -70,10 +70,8 @@ Return to the home screen.
 
 
 - The files we need for assembly are the <fn>mutant_R1.fastq</fn> and <fn>mutant_R2.fastq</fn>.
-- (We don't need the reference genome sequence for this tutorial).
-
--   The reads are paired-end.
--   Each read is 150 bases long. <!--(before trimming)-->
+- The reads are paired-end.
+- Each read is 150 bases long. <!--(before trimming)-->
 
 -   The number of bases sequenced is equivalent to 19x the genome sequence of the wildtype strain. (Read coverage 19x - rather low!).
 
@@ -126,7 +124,7 @@ Although we have warnings for two outputs (per base sequence content; Kmer conte
 
 ## Assemble reads with Velvet
 
-Everyone will be choose/be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here in the shared kmer spreadsheet](https://docs.google.com/spreadsheets/d/1Ruik9-An8aPSVGIr5v29xyoGWpmq-I5iuRHfa-MPV6c/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
+Everyone will be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here](https://docs.google.com/spreadsheets/d/1FGxrwxQZlNafqWX_H9BvbDMUwSUX0VeAXptuHXkEBB0/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
 
 - We will perform a *de novo* assembly of the mutant FASTQ reads into long contiguous sequences (in FASTA format.)
 - Velvet requires the user to input a value of *k* for the assembly process. K-mers are fragments of sequence reads. Small k-mers will give greater connectivity, but large k-mers will give better specificity.
@@ -155,11 +153,13 @@ Ask your demonstrator if you would like to know the difference between contigs a
 
 - Galaxy is now running velvet on the reads for you.
 - Press the refresh button in the history pane to see if it has finished.
-- When it is finished, you will have three new files in your history.  
+- When it is finished, you will have four new files in your history.  
 
     - a <fn>Contigs</fn> file
     - a <fn>Contigs stats</fn> file
+    - a <fn>LastGraph</fn> file
     - the velvet <fn>log</fn> file
+    
 
 - Click on the View Data button ![Eye icon](images/image04.png) on each of the files.
 
@@ -177,7 +177,7 @@ Ask your demonstrator if you would like to know the difference between contigs a
 
 ## Collect some statistics on the contigs.
 
-- Go to <ss>Basic Tools &rarr; NGS Common Toolsets &rarr; FASTA manipulation &rarr; Fasta statistics</ss>
+- Go to <ss>NGS Common Toolsets &rarr; FASTA manipulation &rarr; Fasta statistics</ss>
 - For the required input file, choose the velvet <fn>Contigs</fn> file.
 - Click <ss>Execute</ss>.
 - A new file will appear called <fn>Fasta summary stats</fn>
@@ -215,9 +215,9 @@ Now that we have seen the effect of k-mer size on the assembly, we will run the 
 
 Use the Fasta Statistics tool you used earlier to summarise the Velvet Optimiser output. Examine the resulting table. What are the main differences?
 
-Have a look at the Velvet Optimiser log file, it's hidden. Click on the **hidden** link at the top of the History pane. You'll then need to examine it's STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**.
+Have a look at the Velvet Optimiser log file, it's hidden. Click on the **hidden** link at the top of the History pane. You'll then need to examine its STDERR output by clicking on the **name of the file**, then the **"i"** icon, then **stderr**.
 
-Can you find which **k** value VelvetOptimiser used for it's final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff.. Any ideas what these are? See the [Velvet paper](http://www.genome.org/cgi/content/short/18/5/821) or the [Velvet manual](https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf) for details on these parameters. 
+Can you find which **k** value VelvetOptimiser used for its final assembly? You should also notice that it set another couple of parameters, the expected coverage and the coverage cutoff. Any ideas what these are? See the [Velvet paper](http://www.genome.org/cgi/content/short/18/5/821) or the [Velvet manual](https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf) for details on these parameters. 
 
 <!-- ## What next?
 

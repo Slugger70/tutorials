@@ -30,7 +30,7 @@ The Galaxy interface is separated into three parts. The <ss>Tools</ss> list on t
 
 Open a new tab or window on your web browser. Use Firefox or Chrome - please don’t use Internet Explorer or Safari.
 
-In the address bar, type in the address of your galaxy server, e.g. [Galaxy-Mel](https://galaxy-mel.genome.edu.au/galaxy/).
+In the address bar, type in the address of your galaxy server, e.g. [Galaxy Australia](https://usegalaxy.org.au).
 
 ![Galaxy URL](images/galaxy_address_bar.png)
 
@@ -59,7 +59,7 @@ Return to the home screen.
 
 ![Shared histories](images/shared_data_histories.png)
 
-- A list of published histories should appear. Click on the history called **Microbial-genomics-workshop**
+- A list of published histories should appear. Click on the history called **Microbial Genomics Workshop - BINF90002**
 - Click on <ss>Import history</ss>.
 - An option will appear to re-name the history. We don't need to rename it, so click <ss>Import</ss>.
 
@@ -124,7 +124,7 @@ Although we have warnings for two outputs (per base sequence content; Kmer conte
 
 ## Assemble reads with Velvet
 
-Everyone will be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here](https://docs.google.com/spreadsheets/d/1B7Fx7wYCv5Fu1ZCx1KDJSwAZe75TMZ0oadSGecjgmGM/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
+Everyone will be assigned a value of k (k-mer length) to use in their assembly with Velvet. We will then populate a spreadsheet with result metrics from all of the different assemblies. The spreadsheet can be found [here](https://docs.google.com/spreadsheets/d/1FGxrwxQZlNafqWX_H9BvbDMUwSUX0VeAXptuHXkEBB0/edit?usp=sharing). Please put your name in a blank space in the **Name** column of the spreadsheet and note the value for k next to it.
 
 - We will perform a *de novo* assembly of the mutant FASTQ reads into long contiguous sequences (in FASTA format.)
 - Velvet requires the user to input a value of *k* for the assembly process. K-mers are fragments of sequence reads. Small k-mers will give greater connectivity, but large k-mers will give better specificity.

@@ -1,0 +1,699 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Tutorials for analysing bacterial omics data">
+      
+      
+      
+        <meta name="author" content="Anna Syme, Torsten Seemann">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>Sepsis Training 2016</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/sepsis.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#comparative-genomics" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Sepsis Training 2016" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Sepsis Training 2016
+            </span>
+            <span class="md-header-nav__topic">
+              Comparative Genomics
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Sepsis Training 2016" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Sepsis Training 2016
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Microbial Genomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Microbial Genomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../galaxy/" title="Starting with Galaxy" class="md-nav__link">
+      Starting with Galaxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../data-dna/" title="Training dataset" class="md-nav__link">
+      Training dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../velvet/" title="Genome assembly with Velvet" class="md-nav__link">
+      Genome assembly with Velvet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spades/" title="Genome assembly with Spades" class="md-nav__link">
+      Genome assembly with Spades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prokka/" title="Genome annotation" class="md-nav__link">
+      Genome annotation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variants/" title="Basic Variant finding" class="md-nav__link">
+      Basic Variant finding
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../snippy/" title="Variant finding" class="md-nav__link">
+      Variant finding
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced Microbial Genomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced Microbial Genomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pacbio/" title="Assembly with SMRT portal" class="md-nav__link">
+      Assembly with SMRT portal
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Microbial Transcriptomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Microbial Transcriptomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dge/" title="Differential gene expression" class="md-nav__link">
+      Differential gene expression
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" title="Background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" title="Learning objectives" class="md-nav__link">
+    Learning objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-data" title="Input data" class="md-nav__link">
+    Input data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-reads-to-reference" title="Map reads to reference" class="md-nav__link">
+    Map reads to reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#map-the-reads-on-to-the-reference-sequence" title="Map the reads on to the reference sequence" class="md-nav__link">
+    Map the reads on to the reference sequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examine-the-mapped-reads" title="Examine the mapped reads" class="md-nav__link">
+    Examine the mapped reads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-the-bam-file-using-artemis" title="View the BAM file using Artemis" class="md-nav__link">
+    View the BAM file using Artemis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-the-bam-file-to-your-local-computer" title="Download the BAM file to your local computer." class="md-nav__link">
+    Download the BAM file to your local computer.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-artemis-and-load-the-wildtypegff" title="Start Artemis and load the wildtype.gff" class="md-nav__link">
+    Start Artemis and load the wildtype.gff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-the-bam-file-into-artemis" title="Load the BAM file into Artemis" class="md-nav__link">
+    Load the BAM file into Artemis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variant-calling" title="Variant Calling" class="md-nav__link">
+    Variant Calling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-freebayes" title="Run Freebayes" class="md-nav__link">
+    Run Freebayes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examine-the-freebayes-output" title="Examine the Freebayes output" class="md-nav__link">
+    Examine the Freebayes output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#investigation-of-variants" title="Investigation of Variants" class="md-nav__link">
+    Investigation of Variants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detection-of-macro-indels-and-rearrangement-using-mauve" title="Detection of ‘macro’ INDELS and rearrangement using Mauve" class="md-nav__link">
+    Detection of ‘macro’ INDELS and rearrangement using Mauve
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="comparative-genomics">Comparative Genomics</h1>
+<h2 id="background">Background</h2>
+<p>In this activity we will identify ‘micro’ differences between genome
+sequences using the BWA short read mapper and Freebayes variant caller. After investigating the ‘micro’ differences (SNPs/INDELS), we will attempt to detect larger ‘macro’ differences using Mauve.</p>
+<h2 id="learning-objectives">Learning objectives</h2>
+<p>At the end of this tutorial you should be able to:</p>
+<ol>
+<li>map sequence reads to a reference genome</li>
+<li>view the mapped reads</li>
+<li>identify variants using Freebayes, and</li>
+<li>identify larger structural variants using Mauve.</li>
+</ol>
+<h2 id="input-data">Input data</h2>
+<p>The genome sequences being compared are those of the ‘wildtype’ and ‘mutant’ strains.</p>
+<p>The relevant files should already be available on Galaxy (from the previous &ldquo;Assembly with Spades&rdquo; tutorial).</p>
+<p>Just for a recap:</p>
+<p>We have a closed, annotated genome sequence for the wildtype strain. This file has two formats (one with the sequence, and one with the features).</p>
+<ul>
+<li>Files: <fn>wildtype.fna</fn> and <fn>wildtype.gff</fn></li>
+</ul>
+<p>For the mutant strain we have whole genome shotgun short sequence reads
+from an Illumina DNA sequencing instrument.</p>
+<ul>
+<li>
+<p>Files: <fn>mutant_R1.fastq</fn> and <fn>mutant_R2.fastq</fn> (fastq format)</p>
+</li>
+<li>
+<p>The reads are paired-end</p>
+</li>
+<li>Each read is 150 bases  </li>
+<li>The reads coverage depth is estimated at 19x.</li>
+</ul>
+<h2 id="map-reads-to-reference">Map reads to reference</h2>
+<h3 id="map-the-reads-on-to-the-reference-sequence">Map the reads on to the reference sequence</h3>
+<p>Several programs could be used for this but we will use BWA-MEM.</p>
+<ul>
+<li>Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Mapping &rarr; Map with BWA-MEM</ss>.</li>
+<li>Set the following parameters:</li>
+<li><ss>Will you select a reference genome from your history or use a built-in index?</ss>: <em>Use a genome from history and build index</em></li>
+<li><ss>Use the following dataset as the reference sequence</ss>: <em>wildtype.fna</em></li>
+<li><ss>Select first set of reads</ss>:<em>mutant_R1.fastq</em></li>
+<li><ss>Select second set of reads</ss>:<em>mutant_R2.fastq</em></li>
+<li>Click <ss>Execute</ss>.</li>
+</ul>
+<h3 id="examine-the-mapped-reads">Examine the mapped reads</h3>
+<p>To do this, we will look at the contents of the BAM file.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The BAM file is a Binary Compressed Datafile and cannot be viewed directly. If you attempt to view it using the &ldquo;view data&rdquo; button (the eye icon) it will be downloaded to your local computer. Instead, we must convert it to a non-compressed text format (SAM) first.</p>
+</div>
+<ul>
+<li>Go to <ss>Tools &rarr; NGS Common Toolsets &rarr; NGS: SAM tools &rarr; BAM-to-SAM</ss>.</li>
+<li><ss>BAM File to Convert</ss>: <em>your BAM file</em></li>
+<li><ss>Execute</ss>.</li>
+<li>View the resultant SAM file by clicking on the eye icon.</li>
+<li>Have a look at the fields in the file (the column headings).</li>
+<li>The demonstrator will now point out what all the fields are. (FIXME: or add some info here?)</li>
+</ul>
+<h2 id="view-the-bam-file-using-artemis">View the BAM file using Artemis</h2>
+<p>In this section we will use Artemis to view the BAM file we produced above.</p>
+<h3 id="download-the-bam-file-to-your-local-computer">Download the BAM file to your local computer.</h3>
+<ul>
+<li>Click on the name of the BAM file that you created in Section 1.  </li>
+<li>Click on the download button <img alt="download icon" src="images/image02.png" />; you need to download both the BAM file and the bam_index. (FIXME: why?)</li>
+</ul>
+<p><img alt="screenshot of file download" src="images/image03.png" /></p>
+<ul>
+<li>Also, download the annotated reference sequence; <fn>wildtype.gff</fn>.</li>
+</ul>
+<h3 id="start-artemis-and-load-the-wildtypegff">Start Artemis and load the wildtype.gff</h3>
+<ul>
+<li>From the Artemis menu, Click <ss>File &rarr; Open &hellip;</ss>  </li>
+<li>Load <fn>wildtype.gff</fn>.</li>
+</ul>
+<p>You should now have the wildtype’s annotated sequence loaded into the Artemis genome browser.</p>
+<h3 id="load-the-bam-file-into-artemis">Load the BAM file into Artemis</h3>
+<ul>
+<li>Click <ss>File &rarr; Read BAM/VCF</ss>  </li>
+<li><ss>Select</ss>: <fn>Galaxy … .bam</fn>  </li>
+<li>Click <ss>Ok</ss>   </li>
+</ul>
+<p>FIXME: but don&rsquo;t load index? bai file?</p>
+<p>You should see something like this:</p>
+<p><img alt="BAM file in Artemis" src="images/image00.png" /></p>
+<p>Can you find a SNP?</p>
+<p>Demonstration of the ways that the view of the BAM file can be enhanced!</p>
+<p>Imagine finding each SNP manually - luckily this can be automated using a tool available on Galaxy.</p>
+<h2 id="variant-calling">Variant Calling</h2>
+<p>We will now search through our alignment file (BAM) for statistically-valid SNPs using the Freebayes variant calling tool.</p>
+<h3 id="run-freebayes">Run Freebayes</h3>
+<ul>
+<li>Go to <ss>Tools &rarr; NGS Analysis &rarr; NGS: Variant Analysis &rarr; FreeBayes</ss></li>
+<li>Set the following parameters:</li>
+<li><ss>Load reference genome from</ss>: <em>History</em>  </li>
+<li><ss>Sample BAM file</ss>: <em>Map with BWA-MEM on data … BAM format</em></li>
+<li><ss>Use the following dataset as the reference sequence</ss>: <fn>wildtype.fna</fn>  </li>
+<li>Click <ss>Execute</ss></li>
+</ul>
+<h3 id="examine-the-freebayes-output">Examine the Freebayes output</h3>
+<ul>
+<li>Freebayes will create a VCF file. This stands for Variant Calling Format.</li>
+<li>Click on its View Data button (eye icon) and have a look at the file. There is a lot of header information; the variants appear lower down.</li>
+<li>Can you spot a SNP?</li>
+<li>What about an insertion? A deletion?</li>
+</ul>
+<h2 id="investigation-of-variants">Investigation of Variants</h2>
+<p>What is the impact of the differences we have observed?</p>
+<p>In this section we will use some simple strategies to predict the impact of the variant on the function of the gene and
+perhaps even the strain itself.</p>
+<p><strong>Artemis</strong> - the annotated draft genome sequence of the mutant strain -
+what is the impact the protein coding region? what is the predicted
+function?</p>
+<p><strong>blastp</strong> - <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">http://blast.ncbi.nlm.nih.gov/Blast.cgi</a> the protein domain display - are any major protein domains truncated by the difference?</p>
+<p><strong>LipoP/SignalP/TmHMM</strong> - <a href="http://www.cbs.dtu.dk/services/">http://www.cbs.dtu.dk/services/</a> membrane location prediction - has the change had an impact on the membrane location of the protein?</p>
+<p><strong>Literature?</strong></p>
+<p>Can you suggest a type of nucleotide sequence that might have no impact on the function of the encoded protein?</p>
+<p>In this section we will investigate a few variants together as a demonstration</p>
+<p>perhaps a few individually too??</p>
+<h2 id="detection-of-macro-indels-and-rearrangement-using-mauve">Detection of ‘macro’ INDELS and rearrangement using Mauve</h2>
+<p>We will now examine our earlier assembly and compare it with the reference on a genome wide basis using Mauve.</p>
+<p>Download and install Mauve. More information on Mauve and its use can be found <a href="http://darlinglab.org/mauve/mauve.html">here</a>.</p>
+<p>You will then need to load both the reference <fn>wildtype.gff</fn> file and the <fn>mutant.gff</fn> file that you downloaded earlier.</p>
+<p><img alt="Mauve screenshot" src="images/image01.png" /></p>
+<p>FIXME: add more</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

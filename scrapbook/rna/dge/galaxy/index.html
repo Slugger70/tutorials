@@ -1,0 +1,561 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Tutorials for analysing bacterial omics data">
+      
+      
+      
+        <meta name="author" content="Anna Syme, Torsten Seemann">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>DGE using Galaxy - Sepsis Training 2016</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/sepsis.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#dge-using-galaxy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Sepsis Training 2016" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Sepsis Training 2016
+            </span>
+            <span class="md-header-nav__topic">
+              DGE using Galaxy
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="Sepsis Training 2016" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Sepsis Training 2016
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Microbial Genomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Microbial Genomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/galaxy/" title="Starting with Galaxy" class="md-nav__link">
+      Starting with Galaxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/data-dna/" title="Training dataset" class="md-nav__link">
+      Training dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/velvet/" title="Genome assembly with Velvet" class="md-nav__link">
+      Genome assembly with Velvet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/spades/" title="Genome assembly with Spades" class="md-nav__link">
+      Genome assembly with Spades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/prokka/" title="Genome annotation" class="md-nav__link">
+      Genome annotation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/variants/" title="Basic Variant finding" class="md-nav__link">
+      Basic Variant finding
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/snippy/" title="Variant finding" class="md-nav__link">
+      Variant finding
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced Microbial Genomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced Microbial Genomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/pacbio/" title="Assembly with SMRT portal" class="md-nav__link">
+      Assembly with SMRT portal
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Microbial Transcriptomics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Microbial Transcriptomics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../modules/dge/" title="Differential gene expression" class="md-nav__link">
+      Differential gene expression
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start" title="Start" class="md-nav__link">
+    Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-data" title="Input data" class="md-nav__link">
+    Input data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-transcripts" title="Map transcripts" class="md-nav__link">
+    Map transcripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-the-mapped-reads" title="Visualize the mapped reads" class="md-nav__link">
+    Visualize the mapped reads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#count-reads" title="Count reads" class="md-nav__link">
+    Count reads
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="dge-using-galaxy">DGE using Galaxy</h1>
+<p>No idea - i think there are some workflows but we dont need Cufflinks etc</p>
+<hr />
+<p>This tutorial demonstrates how to quantify differences in gene expression between two bacterial samples. We will use RNA-seq data from the samples, and then use several tools to test for differential gene expression. We can then examine the results in the program <a href="../degust/">Degust</a></p>
+<h2 id="pre-requisites">Pre-requisites</h2>
+<ul>
+<li>your own mGVL instance</li>
+<li>knowledge: Galaxy</li>
+<li>knowledge: Differential gene expression</li>
+</ul>
+<h2 id="start">Start</h2>
+<ul>
+<li>open your mGVL galaxy instance.</li>
+</ul>
+<h2 id="input-data">Input data</h2>
+<ul>
+<li>RNA-seq reads from the samples<ul>
+<li>Bacterial species E. coli from study SRP027344 from EBI ENA</li>
+<li>We will use wildtype (called WTA and WTB) vs. condition 23 (called 23A and 23B)</li>
+<li>[what was this condition? grown in different media?]</li>
+<li>Illumina, single-end, 51-bp</li>
+</ul>
+</li>
+<li>a reference genome<ul>
+<li>E coli: NCBI Reference Sequence: NC_000913.3 in fasta format</li>
+</ul>
+</li>
+<li>FIXME: Get data from GenomeSpace/ or saved galaxy history</li>
+</ul>
+<h2 id="map-transcripts">Map transcripts</h2>
+<ul>
+<li>We need to map the transcripts to a reference genome.</li>
+<li>Bacteria don&rsquo;t need splice-aware mapping (don&rsquo;t have introns)</li>
+<li>Galaxy: tools: <ss>NGS Analysis: NGS Mapping: Map with BWA-MEM</ss></li>
+<li><ss>Will you select a reference genome from your history or use a built-in index?: Use a genome from history and build index</ss></li>
+<li><ss>Use the following dataset as the reference sequence:</ss> E_coli_ref_genome</li>
+<li><ss>Single or Paired-end reads: single </ss></li>
+<li><ss>Select FASTQ dataset</ss>:<ul>
+<li>click on the multiple files button (image) in centre</li>
+<li>make sure all 4 FASTQ files are in there  </li>
+<li>hold down shift to select them all (they turn blue)</li>
+<li>this will map each set of transcripts to the ref genome, so there will be 4 output files</li>
+</ul>
+</li>
+</ul>
+<h2 id="visualize-the-mapped-reads">Visualize the mapped reads</h2>
+<ul>
+<li>The mapped reads are now as .bam files which can&rsquo;t be viewed by just clicking on them.</li>
+<li>[should we use JBrowse?]</li>
+<li>on local computer, install/open IGV</li>
+<li>Genomes-&gt;load genome from file-&gt;../igv/genomes/NC_000913.2 (Ecoli ref)</li>
+<li>then in galaxy, go to the mapped transcripts and click on IGV local</li>
+<li>in IGV, zoom in (top right)</li>
+<li>the bottom pane is the ref sequence / zoom in and out to see the reads.</li>
+</ul>
+<h2 id="count-reads">Count reads</h2>
+<ul>
+<li>Generate read counts per gene</li>
+<li>For each transcriptome, count the number of transcripts per gene/feature
+E.g. with HTSeq</li>
+</ul>
+<p>data:</p>
+<p>this is part of the Colombus database of bacterial expression
+http://nar.oxfordjournals.org/content/suppl/2013/10/29/gkt1086.DC1/nar-02461-data-e-2013-File001.pdf</p>
+<p>wildtype and two mutants
+(all grown under minimal conditions or just mutants?)
+hopefully some expression changes bn condition 23 and wt so that can be viewed in the Degust plots</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>

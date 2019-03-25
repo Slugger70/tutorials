@@ -1,86 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>None/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>None/modules/galaxy/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/data-dna/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/velvet/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/spades/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/prokka/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/variants/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/modules/snippy/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>None/modules/pacbio/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>None/modules/dge/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
     <url>
-     <loc>None/about/</loc>
-     <lastmod>2017-08-15</lastmod>
+     <loc>None</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
 </urlset>
